@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --headline: #0c0a0a;
+  --bg-header: #eee;
+  --bg-container: #fdfdfd;
+  --background: linear-gradient(90deg, #61e0d1 2.73%, #17c6b1 100%);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--bg-container);
+  width: 400px;
+  max-width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.header {
+  background-color: var(--bg-header);
+  padding: 20px;
+  color: var(--headline);
+}
+
+.form {
+  padding: 20px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  display: block;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 100%;
+  padding: 10px;
+}
+
+.form-control i {
+  position: absolute;
+  top: 43px;
+  right: 10px;
+  visibility: hidden;
+}
+
+.form-control small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
+  visibility: hidden;
+}
+
+.form button {
+  padding-block: 14px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-block: 14px;
+  font-weight: 700;
+  font-size: 16px;
+  background-color: #4fd220;
+  color: var(--bg-container);
+
+  transition: background 0.4s;
+}
+
+.form button:hover {
+  background-color: #36af0c;
+}
+
+.form-control.error input {
+  border-color: #ff2d2d;
+}
+
+.form-control.success input {
+  border-color: #4fd220;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  visibility: visible;
+  color: #ff2d2d;
+}
+
+.form-control.success i.fa-circle-check {
+  visibility: visible;
+  color: #4fd220;
+}
+
+.form-control.error small {
+  visibility: visible;
+  color: #ff2d2d;
+}
